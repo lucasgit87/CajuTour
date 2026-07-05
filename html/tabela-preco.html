@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Preço - CajuTour</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+
+  <style>
+    .conteudo-tabela {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .conteudo-tabela h1 {
+      color: #0f8df5;
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .conteudo-tabela > p {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .area-tabela {
+      overflow-x: auto;
+    }
+
+    .tabela-precos {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .tabela-precos caption {
+      caption-side: bottom;
+      color: #333;
+      font-weight: 600;
+      padding-top: 15px;
+    }
+
+    .tabela-precos th,
+    .tabela-precos td {
+      border: 1px solid #e5e5e5;
+      padding: 14px;
+      color: #333;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .tabela-precos th {
+      background: #0f8df5;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .tabela-precos tr:hover td {
+      background: #ffe5f0;
+      font-weight: bold;
+    }
+
+    .tabela-precos a {
+      color: #0f8df5;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .foto-passeio {
+      width: 120px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .voltar-home {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logotipo-menu">
+      <img src="../imagens/logo.png" alt="Logo CajuTour">
+    </div>
+
+    <nav class="menu">
+      <a href="../index.html">Home</a>
+
+      <div class="menu-suspenso">
+        <a href="#">Locais</a>
+        <div class="submenu">
+          <a href="aracaju.html">Aracaju</a>
+          <a href="telha.html">Telha</a>
+          <a href="itabaiana.html">Itabaiana</a>
+          <a href="nossasenhoradagloria.html">Nossa Senhora da Glória</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="conteudo-tabela">
+    <h1>Tabela de Preço</h1>
+    <p>Consulte os valores dos passeios disponíveis no CajuTour.</p>
+
+    <div class="area-tabela">
+      <table class="tabela-precos">
+        <thead>
+          <tr>
+            <th>Código do Passeio</th>
+            <th>Nome do Passeio</th>
+            <th>Foto do Passeio</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">CJ001</td>
+            <td rowspan="2"><a href="aracaju.html">Aracaju</a></td>
+            <td rowspan="2">
+              <a href="aracaju.html"><img class="foto-passeio" src="../imagens/arcosdaorla.jpg" alt="Aracaju"></a>
+            </td>
+            <td>Passeio individual</td>
+            <td>R$ 120,00</td>
+          </tr>
+          <tr>
+            <td>Passeio em grupo</td>
+            <td>R$ 85,00</td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">CJ002</td>
+            <td rowspan="2"><a href="telha.html">Telha</a></td>
+            <td rowspan="2">
+              <a href="telha.html"><img class="foto-passeio" src="../imagens/bannertelha.jpg" alt="Telha"></a>
+            </td>
+            <td>Passeio individual</td>
+            <td>R$ 150,00</td>
+          </tr>
+          <tr>
+            <td>Passeio em grupo</td>
+            <td>R$ 100,00</td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">CJ003</td>
+            <td rowspan="2"><a href="itabaiana.html">Itabaiana</a></td>
+            <td rowspan="2">
+              <a href="itabaiana.html"><img class="foto-passeio" src="../imagens/banneritabaiana.jpg" alt="Itabaiana"></a>
+            </td>
+            <td>Passeio individual</td>
+            <td>R$ 140,00</td>
+          </tr>
+          <tr>
+            <td>Passeio em grupo</td>
+            <td>R$ 95,00</td>
+          </tr>
+
+          <tr>
+            <td rowspan="2">CJ004</td>
+            <td rowspan="2"><a href="nossasenhoradagloria.html">Nossa Senhora da Glória</a></td>
+            <td rowspan="2">
+              <a href="nossasenhoradagloria.html"><img class="foto-passeio" src="../imagens/bannergloria.jpg" alt="Nossa Senhora da Glória"></a>
+            </td>
+            <td>Passeio individual</td>
+            <td>R$ 160,00</td>
+          </tr>
+          <tr>
+            <td>Passeio em grupo</td>
+            <td>R$ 110,00</td>
+          </tr>
+        </tbody>
+        <caption>Valores por pessoa para passeios turísticos em Sergipe.</caption>
+      </table>
+    </div>
+
+    <div class="voltar-home">
+      <a href="../index.html" class="botao">Voltar para Home</a>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <h2>CAJUTOUR</h2>
+    <p>&copy; 2026 - Conheça o menor e mais charmoso estado do Brasil.</p>
+  </footer>
+
+</body>
+</html>

@@ -105,6 +105,12 @@ body {
   transform: scale(1.05);
 }
 
+.grupo-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 
 .sobre-nos {
   width: 100%;

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente - CajuTour</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+
+  <style>
+    .conteudo-cadastro {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .conteudo-cadastro h1 {
+      color: #0f8df5;
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .conteudo-cadastro > p {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .formulario-cadastro {
+      background: #ffffff;
+      padding: 30px;
+      border-left: 8px solid #f8a6c6;
+      border-radius: 15px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .formulario-cadastro fieldset {
+      border: 2px solid #f8a6c6;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .formulario-cadastro legend {
+      color: #0f8df5;
+      font-weight: bold;
+      padding: 0 10px;
+      text-transform: uppercase;
+    }
+
+    .grupo-campo {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    .grupo-campo label,
+    .grupo-opcao p {
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .grupo-campo input,
+    .grupo-campo select,
+    .grupo-campo textarea {
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      padding: 12px;
+      font: inherit;
+      color: #333;
+    }
+
+    .grade-campos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .opcoes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+      color: #333;
+    }
+
+    .opcoes label {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .botoes-formulario {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .botao-formulario {
+      border: none;
+      cursor: pointer;
+    }
+
+    .botao-limpar {
+      background: #f8a6c6;
+    }
+
+    .voltar-home {
+      text-align: center;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topo">
+    <div class="logotipo-menu">
+      <img src="../imagens/logo.png" alt="Logo CajuTour">
+    </div>
+
+    <nav class="menu">
+      <a href="../index.html">Home</a>
+
+      <div class="menu-suspenso">
+        <a href="#">Locais</a>
+        <div class="submenu">
+          <a href="aracaju.html">Aracaju</a>
+          <a href="telha.html">Telha</a>
+          <a href="itabaiana.html">Itabaiana</a>
+          <a href="nossasenhoradagloria.html">Nossa Senhora da Glória</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="conteudo-cadastro">
+    <h1>Cadastro de Cliente</h1>
+    <p>Preencha seus dados para organizar sua experiência turística com o CajuTour.</p>
+
+    <form class="formulario-cadastro">
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <div class="grupo-campo">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="grade-campos">
+          <div class="grupo-campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(79) 99999-9999">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <div class="grupo-campo">
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco">
+        </div>
+
+        <div class="grade-campos">
+          <div class="grupo-campo">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="00000-000">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+              <option value="">Selecione</option>
+              <option value="SE">Sergipe</option>
+              <option value="AL">Alagoas</option>
+              <option value="BA">Bahia</option>
+              <option value="PE">Pernambuco</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Perfil do passeio</legend>
+
+        <div class="grupo-opcao">
+          <p>Faixa Etária:</p>
+          <div class="opcoes">
+            <label><input type="radio" name="faixa-etaria" value="abaixo-15"> abaixo de 15 anos</label>
+            <label><input type="radio" name="faixa-etaria" value="15-30"> entre 15 e 30 anos</label>
+            <label><input type="radio" name="faixa-etaria" value="31-50"> entre 31 e 50 anos</label>
+            <label><input type="radio" name="faixa-etaria" value="50-80"> entre 50 e 80 anos</label>
+            <label><input type="radio" name="faixa-etaria" value="acima-80"> acima de 80 anos</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Restrições</legend>
+
+        <div class="grupo-opcao">
+          <p>Tem restrição?</p>
+          <div class="opcoes">
+            <label><input type="checkbox" name="restricao" value="nenhuma"> nenhuma restrição</label>
+            <label><input type="checkbox" name="restricao" value="mobilidade"> Pessoa com deficiência física/mobilidade reduzida</label>
+            <label><input type="checkbox" name="restricao" value="visual"> Pessoa com deficiência visual</label>
+            <label><input type="checkbox" name="restricao" value="idoso-60"> Idoso com 60 anos ou mais</label>
+            <label><input type="checkbox" name="restricao" value="idoso-80"> Idoso com 80 anos ou mais</label>
+            <label><input type="checkbox" name="restricao" value="alimentar"> Restrição alimentar</label>
+            <label><input type="checkbox" name="restricao" value="outra"> Outra condição relevante</label>
+          </div>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="comentario">Comentário:</label>
+          <textarea id="comentario" name="comentario" rows="5" placeholder="Informe detalhes importantes para o passeio."></textarea>
+        </div>
+      </fieldset>
+
+      <div class="botoes-formulario">
+        <button type="submit" class="botao botao-formulario">Enviar</button>
+        <button type="reset" class="botao botao-formulario botao-limpar">Limpar</button>
+      </div>
+    </form>
+
+    <div class="voltar-home">
+      <a href="../index.html" class="botao">Voltar para Home</a>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <h2>CAJUTOUR</h2>
+    <p>&copy; 2026 - Conheça o menor e mais charmoso estado do Brasil.</p>
+  </footer>
+
+</body>
+</html>
